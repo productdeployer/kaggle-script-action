@@ -176,6 +176,8 @@ runs:
 
     - name: Setup test
       shell: bash
+      env:
+        KAGGLE_API_TOKEN: ${{ inputs.key }}
       run: |
         log_message() {
             echo "[$(date +'%Y-%m-%d %H:%M:%S')] $1"
